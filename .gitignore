@@ -8,3 +8,4 @@ node_modules/
 .envrc
 listing_photos/
 profile_images/
+npm-debug.log
