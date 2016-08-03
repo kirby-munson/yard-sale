@@ -139,11 +139,12 @@ AWS_SECRET_ACCESS_KEY = os.getenv('aws_secret')
 AWS_S3_CUSTOM_DOMAIN = '{}.s3.amazonaws.com'.format(aws_bucket_name)
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+# PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))  # ??????????
+# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles') # errors on  ?????????
 STATIC_URL = '/static/'
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))  # ??????????
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles') # errors on  ?????????
-STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, 'static'),)  #???????
+# STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, 'static'),)  #???????
 
 
 if aws_bucket_name:
