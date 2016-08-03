@@ -6,7 +6,7 @@ var Cart = Backbone.Model.extend({
 
 var CartCollection = Backbone.Collection.extend({
   model: Cart,
-  url:
+  // url:
 });
 
 module.extend = {

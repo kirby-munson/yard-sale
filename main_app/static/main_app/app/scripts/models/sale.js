@@ -6,7 +6,7 @@ var Sale = Backbone.Model.extend({
 
 var SaleCollection = Backbone.Collection.extend({
   model: Sale,
-  url:
+  // url:
 });
 
 module.extend = {

@@ -9,10 +9,11 @@ var CategoryComponent = React.createClass({
     }
   },
   componentWillMount: function(){
+    var self = this;
     var listOfCategories = new CategoryCollection();
 
-    listOfCategories.fetch().done(() => {
-      this.setState({
+    listOfCategories.fetch().done(function(){
+      self.setState({
         'listOfCategories': listOfCategories
       });
     });
@@ -46,8 +47,8 @@ var CategoryComponent2 = React.createClass({
   componentWillMount: function(){
     var listOfCategories = new CategoryCollection();
 
-    listOfCategories.fetch().done(() => {
-      this.setState({
+    listOfCategories.fetch().done(function(){
+      self.setState({
         'listOfCategories': listOfCategories
       });
     });

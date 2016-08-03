@@ -6,7 +6,7 @@ var YSItem = Backbone.Model.extend({
 
 var YSItemCollection = Backbone.Collection.extend({
   model: YSItem,
-  url:
+  // url:
 });
 
 module.extend = {

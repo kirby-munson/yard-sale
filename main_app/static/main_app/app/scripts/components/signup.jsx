@@ -1,5 +1,4 @@
 var React = require('react');
-var router = require('../router');
 var User = require('../models/user').User;
 var LocationComponent2 = require('../components/locations.jsx').LocationComponent2;
 var LocationCollection = require('../models/location').LocationCollection;
@@ -23,9 +22,9 @@ var SignUpComponent = React.createClass({
   componentWillMount: function(){
     var listOfLocations = new LocationCollection();
 
-    listOfLocations.fetch().done(() => {
-      this.setState({
-        'listOfLocations': listOfLocations
+    listOfCategories.fetch().done(function(){
+      self.setState({
+        'listOfCategories': listOfCategories
       });
     });
 

@@ -11,8 +11,8 @@ var LocationComponent = React.createClass({
   componentWillMount: function(){
     var listOfLocations = new LocationCollection();
 
-    listOfLocations.fetch().done(() => {
-      this.setState({
+    listOfLocations.fetch().done(function(){
+      self.setState({
         'listOfLocations': listOfLocations
       });
     });
@@ -44,10 +44,11 @@ var LocationComponent2 = React.createClass({
     }
   },
   componentWillMount: function(){
+    var self = this;
     var listOfLocations = new LocationCollection();
 
-    listOfLocations.fetch().done(() => {
-      this.setState({
+    listOfLocations.fetch().done(function(){
+      self.setState({
         'listOfLocations': listOfLocations
       });
     });
