@@ -29,7 +29,7 @@ var HomeComponent = React.createClass({
           </dl>
         </div>
         <section className="home2">
-          <p className="col s12 col l6 offset-l3" id="white">Search for what youre looking for by category or by location: </p>
+          <p className="col s12 col l6 offset-l3" id="white">Search through Yardsales near you! </p>
           <div>
             <button id="submit3" onClick={this.handleLocation} className="waves-effect waves-light btn col s10 offset-s1 col l4 offset-l4">Browse</button>
           </div>
