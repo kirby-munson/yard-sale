@@ -153,7 +153,7 @@ if aws_bucket_name:
 
 # TO HERE
 
-STATIC_ROOT = BASE_DIR + '/static'  # for css
+# STATIC_ROOT = BASE_DIR + '/static'  # for css
 STATICFILES_LOCATION = 'static'
 
 MEDIA_URL = '/media/'  # for photos
