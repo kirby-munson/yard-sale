@@ -1,0 +1,695 @@
+
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+// colors
+$darkblue: #48616c;
+$blue: #48616c;
+$lightblue: #48616c;
+$gray: #666769;
+$black: #212121;
+$red: #ff5a5a;
+
+
+
+
+// --------------------------------------
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body{
+font-family: 'Dosis', sans-serif;
+}
+
+// HOME PAGE
+// header
+// -----------------------------------------------------
+
+
+.logo{
+  height: 100px;
+  margin-top: 100px;
+  h1{
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    color: white;
+    font-size: 90px;
+  }
+}
+
+dl.navbar{
+  font-family: 'Dosis', sans-serif;
+  margin-top: 20px;
+  dd{
+    display: inline;
+    margin-right: 6px;
+  }
+}
+
+header.head{
+  height: 500px;
+  background-color: #ff5a5a;
+  background-image: url('/static/main_app/app/images/pink.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-origin: content-box;
+}
+
+.nav{
+  background-color: $black;
+}
+
+.material-icons{
+  transform: rotate(90deg);
+}
+
+#submit{
+ background-color: white;
+ color: black;
+ width: 48%;
+ display: inline-block;
+ font-family: 'Dosis', sans-serif;
+}
+
+#submit2{
+  background-color: white;
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+}
+
+#submit3{
+  background-color: white;
+  color: black;
+  margin-top: 20px;
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+}
+
+#submit2:hover{
+  background-color: $red;
+  color: white;
+}
+
+#submit3:hover{
+  background-color: $red;
+  color: white;
+}
+
+#submit:hover{
+  background-color: $red;
+  color: white;
+}
+
+#title{
+  background-color: #48616c;
+  padding: 20px;
+  font-family: 'Dosis', sans-serif;
+}
+
+#submitbtn{
+  background-color: $gray;
+  font-family: 'Dosis', sans-serif;
+  margin-right: 5px;
+}
+
+#submitbtn:hover{
+  background-color: $red;
+}
+
+#submitbtn2{
+  background-color: #ff5a5a;
+  font-family: 'Dosis', sans-serif;
+  width: 230px;
+  font-size: 22px;
+  height: 70px;
+}
+
+div.col.s12{
+  padding: 0;
+}
+
+.home2{
+  padding-top: 130px;
+  padding-bottom: 130px;
+
+  height: 250px;
+  background-color: $darkblue;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+}
+
+.home3{
+  padding-top: 180px;
+  height: 450px;
+  background-color: $gray;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+}
+
+#category{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: 'Dosis', sans-serif;
+}
+
+#white{
+  color: white;
+}
+
+p{
+  font-size: 24px;
+}
+
+.overlay {
+  position: relative;
+}
+
+.overlay h2 {
+  position: absolute;
+   top: 248px;
+   left: 17px;
+   width: 100%;
+   margin: -6px 0px 0px -1px;
+   letter-spacing: 1.09px;
+   line-height: 37px;
+
+}
+
+.overlay:after {
+  position: absolute;
+  content:"";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity:0;
+}
+
+.overlay:hover:after {
+  opacity: 1;
+  background-color: rgba(82, 129, 157, 0.5);
+  height: 317px;
+}
+
+div.col.s4{
+  padding: 0;
+}
+
+section.col.s12{
+  padding: 0;
+}
+
+section.footer{
+  height: 100px;
+  background-color: white;
+  p{
+    margin-left: 100px;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+div#container{
+  margin-bottom: 0;
+}
+
+// dd.social.col.s4{
+//   padding: 90px;
+// }
+
+dd.social{
+  display: inline;
+  padding: 20px;
+  img{
+    width: 12%;
+    height: 12%;
+  }
+}
+
+.icon{
+  height: 40px;
+}
+
+div#list2{
+  width: 250px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  img {
+    border-radius: 5%;
+  }
+}
+
+.profilelinks{
+  margin-top: 20px;
+}
+
+.yardsale{
+  a{
+    color: #ff5a5a;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  a:hover{
+    color: black;
+  }
+  border-radius: 5px;
+  height: 300px;
+  margin: 15px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(241, 241, 241);
+}
+
+.imgwrapper{
+  margin-top: 20px;
+  border: 1px solid black;
+}
+
+.sales{
+  a{
+    color: #ff5a5a;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  a:hover{
+    color: black;
+  }
+  border-radius: 5px;
+  height: 300px;
+  margin: 15px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(241, 241, 241);
+}
+
+.cart{
+  a{
+    color: #ff5a5a;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  a:hover{
+    color: black;
+  }
+  border-radius: 5px;
+  height: 300px;
+  margin: 15px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(241, 241, 241);
+}
+
+.name{
+  text-align: center;
+  font-size: 16px;
+}
+
+.input-field{
+  margin-right: 0px;
+}
+
+.item{
+  margin: 15px;
+  border-radius: 5px;
+  height: 260px;
+  background-color: white;
+}
+
+.ydsale{
+  height: 220px;
+}
+
+div.col.s12.m6.l3{
+  padding-right: 10px;
+}
+
+.ydsalebig{
+  height: 300px;
+}
+
+.imgwrapper3{
+  height: 225px;
+  overflow: hidden;
+}
+
+div.leftside.col.s12.l6{
+  margin-left: 20px;
+}
+
+.imgwrapper2{
+  height: 150px;
+  overflow: hidden;
+}
+
+.yardsale{
+  height: 200px;
+  overflow: hidden;
+  box-shadow: 5px 5px 3px #888888;
+}
+
+#additems{
+  background-color: $darkblue;
+}
+
+.bold{
+  color: lighten(black, 20);
+  font-weight: bold;
+}
+
+.stays{
+  background-color: lighten($red, 20);
+  margin-top: 20px;
+}
+
+.subtitle{
+  text-align: center;
+}
+
+div.salenav{
+  margin-top: 95px;
+  margin-left: 20px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+dl.salenav{
+  padding: 20px;
+}
+
+#salenav{
+  margin-left: 20px;
+  margin-right: 30px;
+}
+
+.salemain{
+  h3{
+    text-align: center;
+  }
+}
+
+.ydsalehuge{
+  height: 550px;
+}
+
+.imgwrapper4{
+  height: 450px;
+  overflow: hidden;
+}
+
+div.rightside{
+  margin-top: 480px;
+}
+
+#finish{
+  margin-top: 20px;
+  background-color: $red;
+}
+
+#add{
+  background-color: $blue;
+}
+
+.formhead{
+  padding: 10px;
+}
+
+span#cursive{
+  font-family: 'Grand Hotel', cursive;
+}
+
+input:focus {
+  border-bottom: 1px solid orange;
+  -webkit-box-shadow: 0 1px 0 0 orange;
+  -moz-box-shadow: 0 1px 0 0 orange;
+  box-shadow: 0 1px 0 0 orange;
+}
+
+   .input-field label {
+     color: red;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #444;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #444;
+     box-shadow: 0 1px 0 0 #444;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #444;
+     box-shadow: 0 1px 0 0 #444;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #444;
+     box-shadow: 0 1px 0 0 #444;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #444;
+   }
+
+// ---------------------------------------
+
+
+@media (max-width: 600px) {
+  #submit{
+   background-color: white;
+   color: black;
+   margin-top: 10px;
+   width: 100%;
+   display: inline-block;
+   font-family: 'Dosis', sans-serif;
+  }
+  #submit2{
+    background-color: white;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+  }
+
+  div.ydsalehuge.card-panel{
+    height: 400px;
+  }
+
+  .imgwrapper4{
+    height: 280px;
+    overflow: hidden;
+  }
+
+  #submit3{
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Dosis', sans-serif;
+  }
+  .home2{
+    padding-top: 180px;
+    height: 350px;
+    background-color: $darkblue;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+  }
+
+  section.footer{
+    display: none;
+  }
+
+
+  .salenav{
+    display: none;
+  }
+
+  div.detail.row{
+    margin-right: 30px;
+  }
+
+  div.rightside{
+    margin-top: 20px;
+  }
+  #submitbtn{
+    background-color: $gray;
+    font-family: 'Dosis', sans-serif;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+  .home2{
+    height: 350px;
+    padding-top: 20px;
+  }
+  #submit{
+   background-color: white;
+   color: black;
+   margin-top: 10px;
+   width: 100%;
+   display: inline-block;
+   font-family: 'Dosis', sans-serif;
+  }
+  #submit2{
+    background-color: white;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+  }
+
+  #submit3{
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Dosis', sans-serif;
+  }
+  section.footer{
+    display: none;
+  }
+
+  .salenav{
+    display: none;
+  }
+
+  div.detail.row{
+    margin-right: 30px;
+  }
+
+  div.rightside{
+    margin-top: 20px;
+  }
+  #submitbtn{
+    background-color: $gray;
+    font-family: 'Dosis', sans-serif;
+    margin-bottom: 20px;
+  }
+  #list2 img{
+    width: 65%;
+  }
+
+  #list,
+  #list1{
+    margin-left: 0px;
+  }
+
+  #submitbtn2{
+    width: 110px;
+    height: 40px;
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1000px) {
+  #list2 img{
+    width: 85%;
+  }
+
+  #list,
+  #list1{
+    margin-left: 40px;
+  }
+
+  div.detail.row{
+    margin-right: 30px;
+  }
+
+  #submitbtn2{
+    width: 190px;
+    height: 50px;
+    font-size: 15px;
+  }
+  .home2{
+    height: 350px;
+    padding-top: 20px;
+  }
+  #submit{
+   background-color: white;
+   color: black;
+   margin-top: 10px;
+   width: 100%;
+   display: inline-block;
+   font-family: 'Dosis', sans-serif;
+  }
+  #submit2{
+    background-color: white;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+  }
+
+  #submit3{
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Dosis', sans-serif;
+  }
+  section.footer{
+    display: none;
+  }
+
+  .salenav{
+    display: none;
+  }
+
+  div.rightside{
+    margin-top: 20px;
+  }
+  #submitbtn{
+    background-color: $gray;
+    font-family: 'Dosis', sans-serif;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1265px) {
+  #list2 img{
+    width: 85%;
+  }
+
+  #list,
+  #list1{
+    margin-left: 50px;
+  }
+
+  #submitbtn2{
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+  }
+  .home2{
+    height: 350px;
+    padding-top: 20px;
+  }
+  section.footer{
+    display: none;
+  }
+}

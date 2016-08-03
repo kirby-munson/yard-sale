@@ -1,0 +1,10 @@
+django
+djangorestframework
+Pillow
+# django-authtools
+dj-database-url
+psycopg2
+gunicorn
+whitenoise
+django-storages
+boto
