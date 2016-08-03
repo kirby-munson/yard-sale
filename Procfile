@@ -1,1 +1,1 @@
-web: gunicorn prez_party.wsgi --workers=2
+web: gunicorn yard_sale.wsgi --workers=2
