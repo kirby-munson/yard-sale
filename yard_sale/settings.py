@@ -141,6 +141,11 @@ AWS_S3_CUSTOM_DOMAIN = '{}.s3.amazonaws.com'.format(aws_bucket_name)
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATIC_URL = '/static/'
 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))  # ??????????
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles') # errors on  ?????????
+STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, 'static'),)  #???????
+
+
 if aws_bucket_name:
     AWS_S3_FILE_OVERWRITE = False
     STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
