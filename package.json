@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "postinstall": "cd main_app/static/main_app && npm install && npm run build"
+  }
+}
