@@ -1,33 +1,38 @@
 var React = require('react');
-var router = require('../router');
 var LocationComponent = require('../components/locations.jsx').LocationComponent;
 var CategoryComponent = require('../components/categories.jsx'). CategoryComponent;
 var ListingCollection = require('../models/listing').ListingCollection;
 var YardSaleCollection = require('../models/yardsale').YardSaleCollection;
+var _ = require('underscore');
 
 
 var SearchLocation = React.createClass({
   getInitialState: function(){
     return {
-      'yardsales': []
+      yardsales: new YardSaleCollection
     }
   },
   componentWillMount: function(){
     var self = this;
-    var yardsales = new YardSaleCollection();
-    // var hereListings = listings.where({location: 22});
-    // console.log(hereListings);
+    var yardsales = this.state.yardsales;
 
     yardsales.fetch().done(function(){
       self.setState({
-        'yardsales': yardsales
+        yardsales: yardsales
       });
     });
   },
+  handleLocation: function(e){
+    e.preventDefault();
+    this.setState({
+      'location': e.target.value
+    });
+    console.log(e.target.value)
+  },
   render: function(){
     var yardsales = this.state.yardsales;
-    var yardsaleList = yardsales.map(function(yardsale, index){
-      console.log(yardsale)
+
+    var yardsaleList = yardsales.where({location: this.state.location}).map(function(yardsale, index){
       return (
           <dd key={index} className="col s12 col m6 col l4">
             <div key={index} className="yardsale">
@@ -41,21 +46,21 @@ var SearchLocation = React.createClass({
       });
     return(
       <div className="row">
-        <div id="salenav" className="salenav card-panel col s12 col m2 col l2">
-          <dl className="salenav">
-            <dd>Sort by location: </dd>
-            <dd><a href="#" onClick={this.handleIrmo}>Irmo</a></dd>
-            <dd><a href="#" onClick={this.handleIrmo}>Greenville</a></dd>
-            <dd><a href="#" onClick={this.handleIrmo}>Greer</a></dd>
-            <dd><a href="#" onClick={this.handleIrmo}>Clemson</a></dd>
-            <dd><a href="#" onClick={this.handleIrmo}>Powdersville</a></dd>
-            <dd><a href="#" onClick={this.handleIrmo}>Columbia</a></dd>
-            <dd><a href="#" onClick={this.handleIrmo}>Charleston</a></dd>
-            <dd><a href="#" onClick={this.handleIrmo}>Other</a></dd>
-          </dl>
+        <div className="col s12 col m12 col l12">
+          <h3 className="browse col l12">Browse by location: </h3>
+          <form className="col s12 col l12">
+          <select className="browser-default col s12 col m6 col offset-m3" onChange={this.handleLocation} name="location">
+            <option value="Irmo">Irmo</option>
+            <option value="Greenville">Greenville</option>
+            <option value="Greer">Greer</option>
+            <option value="Clemson">Clemson</option>
+            <option value="Powdersville">Powdersville</option>
+            <option value="Columbia">Columbia</option>
+            <option value="Charleston">Charleston</option>
+          </select>
+        </form>
         </div>
-        <div className="salemain col s12 col m12 col l9">
-          <h3>Browse Yardsales</h3>
+        <div className="salemain col s12 col m12 col l12">
             <dl>{yardsaleList}</dl>
         </div>
       </div>

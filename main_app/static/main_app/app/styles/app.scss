@@ -58,6 +58,10 @@ dl.navbar{
   }
 }
 
+.browse{
+  text-align: center;
+}
+
 header.head{
   height: 500px;
   background-color: #ff5a5a;
@@ -476,7 +480,7 @@ input:focus {
 // ---------------------------------------
 
 
-@media (max-width: 600px) {
+@media (min-width: 400px) and (max-width: 600px) {
   #submit{
    background-color: white;
    color: black;
@@ -491,6 +495,11 @@ input:focus {
     margin-bottom: 20px;
     text-align: center;
     font-family: 'Dosis', sans-serif;
+  }
+
+  .nav{
+    background-color: $black;
+    height: 150px;
   }
 
   div.ydsalehuge.card-panel{
@@ -510,8 +519,8 @@ input:focus {
     font-family: 'Dosis', sans-serif;
   }
   .home2{
-    padding-top: 180px;
-    height: 350px;
+    padding-top: 200px;
+    height: 250px;
     background-color: $darkblue;
     color: black;
     font-size: 20px;

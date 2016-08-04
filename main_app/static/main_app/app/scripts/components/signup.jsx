@@ -22,9 +22,9 @@ var SignUpComponent = React.createClass({
   componentWillMount: function(){
     var listOfLocations = new LocationCollection();
 
-    listOfCategories.fetch().done(function(){
+    listOfLocations.fetch().done(function(){
       self.setState({
-        'listOfCategories': listOfCategories
+        'listOfLocations': listOfLocations
       });
     });
 

@@ -882,35 +882,40 @@ module.exports = SalesComponent;
 },{"react":182}],12:[function(require,module,exports){
 "use strict";
 var React = require('react');
-var router = require('../router');
 var LocationComponent = require('../components/locations.jsx').LocationComponent;
 var CategoryComponent = require('../components/categories.jsx'). CategoryComponent;
 var ListingCollection = require('../models/listing').ListingCollection;
 var YardSaleCollection = require('../models/yardsale').YardSaleCollection;
+var _ = require('underscore');
 
 
 var SearchLocation = React.createClass({displayName: "SearchLocation",
   getInitialState: function(){
     return {
-      'yardsales': []
+      yardsales: new YardSaleCollection
     }
   },
   componentWillMount: function(){
     var self = this;
-    var yardsales = new YardSaleCollection();
-    // var hereListings = listings.where({location: 22});
-    // console.log(hereListings);
+    var yardsales = this.state.yardsales;
 
     yardsales.fetch().done(function(){
       self.setState({
-        'yardsales': yardsales
+        yardsales: yardsales
       });
     });
   },
+  handleLocation: function(e){
+    e.preventDefault();
+    this.setState({
+      'location': e.target.value
+    });
+    console.log(e.target.value)
+  },
   render: function(){
     var yardsales = this.state.yardsales;
-    var yardsaleList = yardsales.map(function(yardsale, index){
-      console.log(yardsale)
+
+    var yardsaleList = yardsales.where({location: this.state.location}).map(function(yardsale, index){
       return (
           React.createElement("dd", {key: index, className: "col s12 col m6 col l4"}, 
             React.createElement("div", {key: index, className: "yardsale"}, 
@@ -924,21 +929,21 @@ var SearchLocation = React.createClass({displayName: "SearchLocation",
       });
     return(
       React.createElement("div", {className: "row"}, 
-        React.createElement("div", {id: "salenav", className: "salenav card-panel col s12 col m2 col l2"}, 
-          React.createElement("dl", {className: "salenav"}, 
-            React.createElement("dd", null, "Sort by location: "), 
-            React.createElement("dd", null, React.createElement("a", {href: "#", onClick: this.handleIrmo}, "Irmo")), 
-            React.createElement("dd", null, React.createElement("a", {href: "#", onClick: this.handleIrmo}, "Greenville")), 
-            React.createElement("dd", null, React.createElement("a", {href: "#", onClick: this.handleIrmo}, "Greer")), 
-            React.createElement("dd", null, React.createElement("a", {href: "#", onClick: this.handleIrmo}, "Clemson")), 
-            React.createElement("dd", null, React.createElement("a", {href: "#", onClick: this.handleIrmo}, "Powdersville")), 
-            React.createElement("dd", null, React.createElement("a", {href: "#", onClick: this.handleIrmo}, "Columbia")), 
-            React.createElement("dd", null, React.createElement("a", {href: "#", onClick: this.handleIrmo}, "Charleston")), 
-            React.createElement("dd", null, React.createElement("a", {href: "#", onClick: this.handleIrmo}, "Other"))
+        React.createElement("div", {className: "col s12 col m12 col l12"}, 
+          React.createElement("h3", {className: "browse col l12"}, "Browse by location: "), 
+          React.createElement("form", {className: "col s12 col l12"}, 
+          React.createElement("select", {className: "browser-default col s12 col m6 col offset-m3", onChange: this.handleLocation, name: "location"}, 
+            React.createElement("option", {value: "Irmo"}, "Irmo"), 
+            React.createElement("option", {value: "Greenville"}, "Greenville"), 
+            React.createElement("option", {value: "Greer"}, "Greer"), 
+            React.createElement("option", {value: "Clemson"}, "Clemson"), 
+            React.createElement("option", {value: "Powdersville"}, "Powdersville"), 
+            React.createElement("option", {value: "Columbia"}, "Columbia"), 
+            React.createElement("option", {value: "Charleston"}, "Charleston")
           )
+        )
         ), 
-        React.createElement("div", {className: "salemain col s12 col m12 col l9"}, 
-          React.createElement("h3", null, "Browse Yardsales"), 
+        React.createElement("div", {className: "salemain col s12 col m12 col l12"}, 
             React.createElement("dl", null, yardsaleList)
         )
       )
@@ -950,7 +955,7 @@ module.exports = {
   'SearchLocation': SearchLocation
 };
 
-},{"../components/categories.jsx":2,"../components/locations.jsx":7,"../models/listing":17,"../models/yardsale":21,"../router":22,"react":182}],13:[function(require,module,exports){
+},{"../components/categories.jsx":2,"../components/locations.jsx":7,"../models/listing":17,"../models/yardsale":21,"react":182,"underscore":183}],13:[function(require,module,exports){
 "use strict";
 var React = require('react');
 var User = require('../models/user').User;
@@ -976,9 +981,9 @@ var SignUpComponent = React.createClass({displayName: "SignUpComponent",
   componentWillMount: function(){
     var listOfLocations = new LocationCollection();
 
-    listOfCategories.fetch().done(function(){
+    listOfLocations.fetch().done(function(){
       self.setState({
-        'listOfCategories': listOfCategories
+        'listOfLocations': listOfLocations
       });
     });
 
