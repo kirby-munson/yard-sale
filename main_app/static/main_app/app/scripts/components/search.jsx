@@ -46,10 +46,11 @@ var SearchLocation = React.createClass({
       });
     return(
       <div className="row">
-        <div className="col s12 col m12 col l12">
-          <h3 className="browse col l12">Browse by location: </h3>
+        <div className="search col s12 col m12 col l12">
+          <h3 id="title" className="white-text card-panel col s12">Browse by location<a className="profilelink" href="#profile/">Profile</a> </h3>
           <form className="col s12 col l12">
           <select className="browser-default col s12 col m6 col offset-m3" onChange={this.handleLocation} name="location">
+            <option value="">Choose city</option>
             <option value="Irmo">Irmo</option>
             <option value="Greenville">Greenville</option>
             <option value="Greer">Greer</option>

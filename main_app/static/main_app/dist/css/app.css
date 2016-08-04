@@ -5904,6 +5904,8 @@ header.head {
   background-color: #ff5a5a;
   font-family: 'Dosis', sans-serif;
   width: 230px;
+  margin-left: 10px;
+  margin-top: 10px;
   font-size: 22px;
   height: 70px; }
 
@@ -6056,6 +6058,23 @@ div#list2 {
   text-align: center;
   font-size: 16px; }
 
+.number {
+  text-align: center;
+  margin-top: 20px; }
+
+.profilelink {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  float: right; }
+
+a.profilelink {
+  text-decoration: none; }
+
+a.profilelink:hover {
+  color: #ff5a5a; }
+
 .input-field {
   margin-right: 0px; }
 
@@ -6198,6 +6217,13 @@ input:focus {
   div.ydsalehuge.card-panel {
     height: 400px; }
 
+  #submitbtn2 {
+    width: 250px;
+    height: 70px;
+    margin-left: 70px;
+    margin-top: 10px;
+    font-size: 20px; }
+
   .imgwrapper4 {
     height: 280px;
     overflow: hidden; }
@@ -6220,6 +6246,11 @@ input:focus {
 
   section.footer {
     display: none; }
+
+  header.head {
+    background-image: none;
+    height: 720px;
+    padding-top: 120px; }
 
   .salenav {
     display: none; }
@@ -6254,6 +6285,13 @@ input:focus {
     text-align: center;
     font-family: 'Dosis', sans-serif; }
 
+  header.head {
+    height: 800px;
+    background-color: #ff5a5a; }
+
+  #icons {
+    display: none; }
+
   #submit3 {
     background-color: white;
     color: black;
@@ -6285,9 +6323,14 @@ input:focus {
   #list1 {
     margin-left: 0px; }
 
+  #white {
+    margin-top: 50px; }
+
   #submitbtn2 {
     width: 110px;
     height: 40px;
+    margin-left: 10px;
+    margin-top: 10px;
     font-size: 10px; } }
 @media (min-width: 801px) and (max-width: 1000px) {
   #list2 img {
@@ -6300,9 +6343,14 @@ input:focus {
   div.detail.row {
     margin-right: 30px; }
 
+  #icons {
+    display: none; }
+
   #submitbtn2 {
     width: 190px;
     height: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
     font-size: 15px; }
 
   .home2 {
@@ -6334,6 +6382,9 @@ input:focus {
   section.footer {
     display: none; }
 
+  #white {
+    margin-top: 50px; }
+
   .salenav {
     display: none; }
 
@@ -6352,9 +6403,14 @@ input:focus {
   #list1 {
     margin-left: 50px; }
 
+  #white {
+    margin-top: 80px; }
+
   #submitbtn2 {
     width: 200px;
     height: 50px;
+    margin-left: 50px;
+    margin-top: 10px;
     font-size: 18px; }
 
   .home2 {
@@ -6362,6 +6418,19 @@ input:focus {
     padding-top: 20px; }
 
   section.footer {
+    display: none; }
+
+  #icons {
     display: none; } }
+@media (min-width: 1265px) {
+  #icons {
+    display: none; }
+
+  #submitbtn2 {
+    width: 230px;
+    height: 60px;
+    margin-left: 70px;
+    margin-top: 10px;
+    font-size: 22px; } }
 
 /*# sourceMappingURL=app.css.map */

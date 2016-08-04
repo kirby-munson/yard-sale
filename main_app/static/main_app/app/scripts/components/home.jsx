@@ -19,6 +19,7 @@ var HomeComponent = React.createClass({
         <header className="head">
           <div className="logo col s12">
             <h1 className="col s12"><span id="cursive">re </span>Purpose</h1>
+            <img id="icons" src="/static/main_app/app/images/icons.png" />
           </div>
         </header>
         <div className="nav col s12">

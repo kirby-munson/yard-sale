@@ -5,8 +5,8 @@ var CartComponent = React.createClass({
   render: function(){
     return(
       <div className="row">
-        <h3 id="title" className=" white-text card-panel col s8 offset-s2">Cart</h3>
-        <h1 className="col s8 offset-s2">Coming soon!!</h1>
+        <h3 id="title" className="white-text card-panel col s12">Cart<a className="profilelink" href="#profile/">My Profile</a></h3>
+        <h1 className="col s8 offset-s2">You have (1) Item in your cart</h1>
       </div>
     )
   }

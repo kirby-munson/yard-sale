@@ -7,8 +7,8 @@ var CartComponent = React.createClass({displayName: "CartComponent",
   render: function(){
     return(
       React.createElement("div", {className: "row"}, 
-        React.createElement("h3", {id: "title", className: " white-text card-panel col s8 offset-s2"}, "Cart"), 
-        React.createElement("h1", {className: "col s8 offset-s2"}, "Coming soon!!")
+        React.createElement("h3", {id: "title", className: "white-text card-panel col s12"}, "Cart", React.createElement("a", {className: "profilelink", href: "#profile/"}, "My Profile")), 
+        React.createElement("h1", {className: "col s8 offset-s2"}, "You have (1) Item in your cart")
       )
     )
   }
@@ -458,7 +458,8 @@ var HomeComponent = React.createClass({displayName: "HomeComponent",
       React.createElement("div", {className: "row"}, 
         React.createElement("header", {className: "head"}, 
           React.createElement("div", {className: "logo col s12"}, 
-            React.createElement("h1", {className: "col s12"}, React.createElement("span", {id: "cursive"}, "re "), "Purpose")
+            React.createElement("h1", {className: "col s12"}, React.createElement("span", {id: "cursive"}, "re "), "Purpose"), 
+            React.createElement("img", {id: "icons", src: "/static/main_app/app/images/icons.png"})
           )
         ), 
         React.createElement("div", {className: "nav col s12"}, 
@@ -822,9 +823,8 @@ var ProfileComponent = React.createClass({displayName: "ProfileComponent",
             React.createElement("div", {id: "list1", className: "col s8 offset-s2 col m8 offset-m4 col l8 offset-l2"}, me.get('email_address')), 
 
 
-            React.createElement("dl", {className: "profilelinks col s8 offset-s2 col m2 col l8 offset-l2"}, 
               React.createElement("dd", null, React.createElement("button", {id: "submitbtn2", className: "col m6 waves-effect waves-light btn", onClick: this.handleCreateProfile}, "Create Yardsale"))
-            )
+            
           ), 
 
           React.createElement("div", {id: "main", className: "col s12 col m9 col l9"}, 
@@ -929,10 +929,11 @@ var SearchLocation = React.createClass({displayName: "SearchLocation",
       });
     return(
       React.createElement("div", {className: "row"}, 
-        React.createElement("div", {className: "col s12 col m12 col l12"}, 
-          React.createElement("h3", {className: "browse col l12"}, "Browse by location: "), 
+        React.createElement("div", {className: "search col s12 col m12 col l12"}, 
+          React.createElement("h3", {id: "title", className: "white-text card-panel col s12"}, "Browse by location", React.createElement("a", {className: "profilelink", href: "#profile/"}, "Profile"), " "), 
           React.createElement("form", {className: "col s12 col l12"}, 
           React.createElement("select", {className: "browser-default col s12 col m6 col offset-m3", onChange: this.handleLocation, name: "location"}, 
+            React.createElement("option", {value: ""}, "Choose city"), 
             React.createElement("option", {value: "Irmo"}, "Irmo"), 
             React.createElement("option", {value: "Greenville"}, "Greenville"), 
             React.createElement("option", {value: "Greer"}, "Greer"), 

@@ -82,9 +82,8 @@ var ProfileComponent = React.createClass({
             <div id="list1" className="col s8 offset-s2 col m8 offset-m4 col l8 offset-l2">{me.get('email_address')}</div>
 
 
-            <dl className="profilelinks col s8 offset-s2 col m2 col l8 offset-l2">
               <dd><button id="submitbtn2" className="col m6 waves-effect waves-light btn" onClick={this.handleCreateProfile}>Create Yardsale</button></dd>
-            </dl>
+            
           </div>
 
           <div id="main" className="col s12 col m9 col l9">
