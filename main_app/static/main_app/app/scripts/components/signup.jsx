@@ -20,6 +20,7 @@ var SignUpComponent = React.createClass({
      }
   },
   componentWillMount: function(){
+    var self = this;
     var listOfLocations = new LocationCollection();
 
     listOfLocations.fetch().done(function(){
