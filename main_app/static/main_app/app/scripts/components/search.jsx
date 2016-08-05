@@ -1,9 +1,6 @@
 var React = require('react');
 var LocationComponent = require('../components/locations.jsx').LocationComponent;
-var CategoryComponent = require('../components/categories.jsx'). CategoryComponent;
-var ListingCollection = require('../models/listing').ListingCollection;
 var YardSaleCollection = require('../models/yardsale').YardSaleCollection;
-var _ = require('underscore');
 
 
 var SearchLocation = React.createClass({
@@ -56,7 +53,6 @@ var SearchLocation = React.createClass({
             <option value="Greer">Greer</option>
             <option value="Clemson">Clemson</option>
             <option value="Powdersville">Powdersville</option>
-            <option value="Columbia">Columbia</option>
             <option value="Charleston">Charleston</option>
           </select>
         </form>

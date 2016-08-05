@@ -1,7 +1,4 @@
 var React = require('react');
-var router = require('../router');
-var $ = require('jquery');
-var User = require('../models/user').User;
 var ListingCollection = require('../models/listing').ListingCollection;
 var YardSaleCollection = require('../models/yardsale').YardSaleCollection;
 
@@ -45,10 +42,8 @@ var ListingComponent = React.createClass({
               <div className="imgwrapper3">
                 <img src={listing.get('photo')} />
               </div>
-              <a href={"#detail/" + listing.get('id') + '/'}>{listing.get('item') + ' '}</a>
-              {listing.get('seller') + ' '}
-              {'$' + listing.get('price') + ' '}
-              {listing.get('description') + ' '}
+              <a href={"#detail/" + listing.get('id') + '/'}>{listing.get('item') + ' '}</a><br />
+              {'$' + listing.get('price') + ' '}<br />
             </div>
           </dd>
         );

@@ -1,6 +1,4 @@
 var React = require('react');
-var LocationComponent = require('../components/locations.jsx').LocationComponent;
-var CategoryComponent = require('../components/categories.jsx').CategoryComponent;
 
 var HomeComponent = React.createClass({
   handleSignUp: function(){

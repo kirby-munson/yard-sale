@@ -1,15 +1,8 @@
 var React = require('react');
-var router = require('../router');
-var LocationComponent = require('../components/locations.jsx');
 var CategoryComponent2 = require('../components/categories.jsx').CategoryComponent2;
 var Listing = require('../models/listing').Listing;
 var YardSale = require('../models/yardsale').YardSale;
 var YardSaleCollection = require('../models/yardsale').YardSaleCollection;
-
-
-
-var $ = require('jquery');
-
 
 var CreateComponent = React.createClass({
   getInitialState: function(){
@@ -123,6 +116,7 @@ var CreateListingComponent = React.createClass({
   componentWillMount: function(){
     var self = this;
     var thisId = this.props.id;
+
     var yardsales = new YardSaleCollection();
     yardsales.fetch().done(function(){
       self.setState({
@@ -224,7 +218,7 @@ var CreateListingComponent = React.createClass({
                      id="price"
                      value={this.state.price}
                      onChange={this.handlePriceChange}
-                     type="text" />
+                     type="number" />
                    <label htmlFor="price">Price</label>
                 </div>
                 <div className="input-field col s12 col l6">

@@ -11,18 +11,11 @@ var SignUpComponent = require('./components/signup.jsx');
 var LoginComponent = require('./components/login.jsx');
 var ProfileComponent = require('./components/profile.jsx').ProfileComponent;
 var ListingComponent = require('./components/listing.jsx').ListingComponent;
-var YardSaleComponent = require('./components/sale.jsx');
-var SalesComponent = require('./components/sales.jsx');
 var CartComponent = require('./components/cart.jsx');
 var CreateComponent = require('./components/create.jsx').CreateComponent;
 var CreateListingComponent = require('./components/create.jsx').CreateListingComponent;
 var DetailComponent = require('./components/detail.jsx').DetailComponent;
-var SpecialDetailComponent = require('./components/profile.jsx').SpecialDetailComponent;
-var SpecialListingComponent = require('./components/profile.jsx').SpecialListingComponent;
 var SearchLocation = require('./components/search.jsx').SearchLocation;
-
-
-
 
 
 
@@ -34,13 +27,10 @@ var TheAppRouter = Backbone.Router.extend({
     'signup/': 'signup',
     'profile/': 'profile',
     'yardsale/': 'yardsale',
-    'sales/': 'sales',
     'cart/': 'cart',
     'createsale/': 'createsale',
     'listing/:id/': 'listing',
     'detail/:id/': 'detail',
-    'special/:id/': 'special',
-    'speciallisting/': 'speciallisting',
     'searchlocation/': 'searchlocation',
     'itemsadd/:id': 'itemsadd'
   },
@@ -100,12 +90,6 @@ var TheAppRouter = Backbone.Router.extend({
       document.getElementById('container')
     );
   },
-  sales: function(){
-    ReactDOM.render(
-      React.createElement(SalesComponent, {router: self}),
-      document.getElementById('container')
-    );
-  },
   cart: function(){
     ReactDOM.render(
       React.createElement(CartComponent, {router: self}),
@@ -123,20 +107,6 @@ var TheAppRouter = Backbone.Router.extend({
     var self = this;
     ReactDOM.render(
       React.createElement(ListingComponent, {id: id, router: self}),
-      document.getElementById('container')
-    );
-  },
-  speciallisting: function(){
-    var self = this;
-    ReactDOM.render(
-      React.createElement(SpecialListingComponent, {router: self}),
-      document.getElementById('container')
-    );
-  },
-  special: function(id){
-    var self = this;
-    ReactDOM.render(
-      React.createElement(SpecialDetailComponent, {id: id, router: self}),
       document.getElementById('container')
     );
   },

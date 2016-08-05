@@ -157,7 +157,6 @@ var SignUpComponent = React.createClass({
                  </select>
                </div>
                <div className="input-field col s12 col m10 col l6">
-                 <img src={this.state.photo} />
                  <label htmlFor="photo">Photo</label><br />
                  <br />
                   <input

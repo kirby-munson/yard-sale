@@ -1,6 +1,4 @@
 var React = require('react');
-var router = require('../router');
-var $ = require('jquery');
 var User = require('../models/user').User;
 var ListingCollection = require('../models/listing').ListingCollection;
 

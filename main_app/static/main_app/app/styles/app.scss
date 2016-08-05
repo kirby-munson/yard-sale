@@ -17,6 +17,8 @@ $red: #ff5a5a;
 
 
 
+
+
 // --------------------------------------
 
 *,
@@ -40,7 +42,7 @@ font-family: 'Dosis', sans-serif;
 
 .logo{
   height: 100px;
-  margin-top: 100px;
+  margin-top: 200px;
   h1{
     text-align: center;
     font-family: 'Dosis', sans-serif;
@@ -58,12 +60,8 @@ dl.navbar{
   }
 }
 
-.browse{
-  text-align: center;
-}
-
 header.head{
-  height: 500px;
+  height: 800px;
   background-color: #ff5a5a;
   background-image: url('https://s3.amazonaws.com/repurposekirby/main_app/dist/images/pink.png');
   background-position: center;
@@ -74,16 +72,14 @@ header.head{
 
 .nav{
   background-color: $black;
-}
-
-.material-icons{
-  transform: rotate(90deg);
+  height: 150px;
 }
 
 #submit{
  background-color: white;
  color: black;
  width: 48%;
+ margin-top: 30px;
  display: inline-block;
  font-family: 'Dosis', sans-serif;
 }
@@ -119,6 +115,9 @@ header.head{
   color: white;
 }
 
+
+// ----------------------------------------------------------
+
 #title{
   background-color: #48616c;
   padding: 20px;
@@ -150,10 +149,10 @@ div.col.s12{
 }
 
 .home2{
-  padding-top: 130px;
+  padding-top: 290px;
   padding-bottom: 130px;
 
-  height: 250px;
+  height: 550px;
   background-color: $darkblue;
   color: black;
   font-size: 20px;
@@ -161,15 +160,17 @@ div.col.s12{
   font-family: 'Dosis', sans-serif;
 }
 
-.home3{
-  padding-top: 180px;
-  height: 450px;
-  background-color: $gray;
-  color: black;
-  font-size: 20px;
+// searchpage
+// ----------------------------------------------
+
+.browse{
   text-align: center;
-  font-family: 'Dosis', sans-serif;
 }
+
+
+
+// ------------------------------------------------
+
 
 #category{
   margin-bottom: 20px;
@@ -183,37 +184,6 @@ div.col.s12{
 
 p{
   font-size: 24px;
-}
-
-.overlay {
-  position: relative;
-}
-
-.overlay h2 {
-  position: absolute;
-   top: 248px;
-   left: 17px;
-   width: 100%;
-   margin: -6px 0px 0px -1px;
-   letter-spacing: 1.09px;
-   line-height: 37px;
-
-}
-
-.overlay:after {
-  position: absolute;
-  content:"";
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  opacity:0;
-}
-
-.overlay:hover:after {
-  opacity: 1;
-  background-color: rgba(82, 129, 157, 0.5);
-  height: 317px;
 }
 
 div.col.s4{
@@ -237,10 +207,6 @@ section.footer{
 div#container{
   margin-bottom: 0;
 }
-
-// dd.social.col.s4{
-//   padding: 90px;
-// }
 
 dd.social{
   display: inline;
@@ -289,42 +255,6 @@ div#list2{
 .imgwrapper{
   margin-top: 20px;
   border: 1px solid black;
-}
-
-.sales{
-  a{
-    color: #ff5a5a;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  a:hover{
-    color: black;
-  }
-  border-radius: 5px;
-  height: 300px;
-  margin: 15px;
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: rgb(241, 241, 241);
-}
-
-.cart{
-  a{
-    color: #ff5a5a;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  a:hover{
-    color: black;
-  }
-  border-radius: 5px;
-  height: 300px;
-  margin: 15px;
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: rgb(241, 241, 241);
 }
 
 .name{
@@ -403,11 +333,7 @@ div.leftside.col.s12.l6{
 .bold{
   color: lighten(black, 20);
   font-weight: bold;
-}
-
-.stays{
-  background-color: lighten($red, 20);
-  margin-top: 20px;
+  font-size: 15px;
 }
 
 .subtitle{
@@ -466,44 +392,12 @@ span#cursive{
   font-family: 'Grand Hotel', cursive;
 }
 
-input:focus {
-  border-bottom: 1px solid orange;
-  -webkit-box-shadow: 0 1px 0 0 orange;
-  -moz-box-shadow: 0 1px 0 0 orange;
-  box-shadow: 0 1px 0 0 orange;
-}
 
-   .input-field label {
-     color: red;
-   }
-   /* label focus color */
-   .input-field input[type=text]:focus + label {
-     color: #444;
-   }
-   /* label underline focus color */
-   .input-field input[type=text]:focus {
-     border-bottom: 1px solid #444;
-     box-shadow: 0 1px 0 0 #444;
-   }
-   /* valid color */
-   .input-field input[type=text].valid {
-     border-bottom: 1px solid #444;
-     box-shadow: 0 1px 0 0 #444;
-   }
-   /* invalid color */
-   .input-field input[type=text].invalid {
-     border-bottom: 1px solid #444;
-     box-shadow: 0 1px 0 0 #444;
-   }
-   /* icon prefix focus color */
-   .input-field .prefix.active {
-     color: #444;
-   }
 
 // ---------------------------------------
 
 
-@media (min-width: 400px) and (max-width: 600px) {
+@media (min-width: 300px) and (max-width: 401px) {
   #submit{
    background-color: white;
    color: black;
@@ -512,6 +406,7 @@ input:focus {
    display: inline-block;
    font-family: 'Dosis', sans-serif;
   }
+
   #submit2{
     background-color: white;
     color: black;
@@ -542,7 +437,6 @@ input:focus {
     overflow: hidden;
   }
 
-
   #submit3{
     background-color: white;
     color: black;
@@ -550,6 +444,7 @@ input:focus {
     margin-top: 20px;
     font-family: 'Dosis', sans-serif;
   }
+
   .home2{
     padding-top: 200px;
     height: 250px;
@@ -570,7 +465,6 @@ input:focus {
     padding-top: 120px;
   }
 
-
   .salenav{
     display: none;
   }
@@ -589,11 +483,7 @@ input:focus {
   }
 }
 
-@media (min-width: 601px) and (max-width: 800px) {
-  .home2{
-    height: 350px;
-    padding-top: 20px;
-  }
+@media (min-width: 400px) and (max-width: 600px) {
   #submit{
    background-color: white;
    color: black;
@@ -602,6 +492,99 @@ input:focus {
    display: inline-block;
    font-family: 'Dosis', sans-serif;
   }
+
+  #submit2{
+    background-color: white;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+  }
+
+  .nav{
+    background-color: $black;
+    height: 150px;
+  }
+
+  div.ydsalehuge.card-panel{
+    height: 400px;
+  }
+
+  #submitbtn2{
+    width: 250px;
+    height: 70px;
+    margin-left: 70px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .imgwrapper4{
+    height: 280px;
+    overflow: hidden;
+  }
+
+  #submit3{
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Dosis', sans-serif;
+  }
+
+  .home2{
+    padding-top: 200px;
+    height: 550px;
+    background-color: $darkblue;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+  }
+
+  section.footer{
+    display: none;
+  }
+
+  header.head{
+    background-image: none;
+    height: 720px;
+    padding-top: 120px;
+  }
+
+  .salenav{
+    display: none;
+  }
+
+  div.detail.row{
+    margin-right: 30px;
+  }
+
+  div.rightside{
+    margin-top: 20px;
+  }
+
+  #submitbtn{
+    background-color: $gray;
+    font-family: 'Dosis', sans-serif;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+  .home2{
+    height: 350px;
+    padding-top: 20px;
+  }
+
+  #submit{
+   background-color: white;
+   color: black;
+   margin-top: 10px;
+   width: 100%;
+   display: inline-block;
+   font-family: 'Dosis', sans-serif;
+  }
+
   #submit2{
     background-color: white;
     color: black;
@@ -626,6 +609,7 @@ input:focus {
     margin-top: 20px;
     font-family: 'Dosis', sans-serif;
   }
+
   section.footer{
     display: none;
   }
@@ -641,11 +625,13 @@ input:focus {
   div.rightside{
     margin-top: 20px;
   }
+
   #submitbtn{
     background-color: $gray;
     font-family: 'Dosis', sans-serif;
     margin-bottom: 20px;
   }
+
   #list2 img{
     width: 65%;
   }
@@ -693,10 +679,12 @@ input:focus {
     margin-top: 10px;
     font-size: 15px;
   }
+
   .home2{
     height: 350px;
     padding-top: 20px;
   }
+
   #submit{
    background-color: white;
    color: black;
@@ -705,6 +693,7 @@ input:focus {
    display: inline-block;
    font-family: 'Dosis', sans-serif;
   }
+
   #submit2{
     background-color: white;
     color: black;
@@ -720,6 +709,7 @@ input:focus {
     margin-top: 20px;
     font-family: 'Dosis', sans-serif;
   }
+
   section.footer{
     display: none;
   }
@@ -735,6 +725,7 @@ input:focus {
   div.rightside{
     margin-top: 20px;
   }
+
   #submitbtn{
     background-color: $gray;
     font-family: 'Dosis', sans-serif;
@@ -763,10 +754,12 @@ input:focus {
     margin-top: 10px;
     font-size: 18px;
   }
+
   .home2{
     height: 350px;
     padding-top: 20px;
   }
+
   section.footer{
     display: none;
   }

@@ -1,11 +1,7 @@
 var React = require('react');
-var router = require('../router');
-var $ = require('jquery');
 var User = require('../models/user').User;
 var ListingCollection = require('../models/listing').ListingCollection;
 var YardSaleCollection = require('../models/yardsale').YardSaleCollection;
-var ListingComponent = require('../components/listing.jsx').ListingComponent;
-
 
 
 var ProfileComponent = React.createClass({
@@ -64,8 +60,7 @@ var ProfileComponent = React.createClass({
       if(id == meStuff.id){
       return (
           <div key={index} className="yardsale">
-            <a href={'#listing/' + yardsale.get('id') + '/'}><h6>{yardsale.get('name')}</h6></a>
-            <dl><span className="bold">Cause: </span> {yardsale.get('cause')}</dl>
+            <a href={'#listing/' + yardsale.get('id') + '/'}><h5>{yardsale.get('name')}</h5></a>
             <dl><span className="bold">Description: </span> {yardsale.get('description')}</dl>
             <dl><span className="bold">Location: </span> {yardsale.get('location')}</dl>
             <a href={'#itemsadd/' + yardsale.get('id')}><button id="additems" className="additems waves-effect waves-light btn">Add Items</button></a>
@@ -75,7 +70,7 @@ var ProfileComponent = React.createClass({
     });
     return(
       <div className="row">
-        <h3 id="title" className="white-text card-panel col s12">Hello, {me.get('first_name')}</h3>
+        <h3 id="title" className="white-text card-panel col s12">Hello, {me.get('first_name')}<a className="profilelink" href="#searchlocation/">Browse</a></h3>
           <div id="side-nav" className="col s12 col m3 col l3">
             <div id="list2" className="idphoto col s8 offset-s2 col m1 col l8 offset-l2"><img src={me.get('photo')}></img></div>
             <div id="list" className="col s8 offset-s2 col m8 offset-m4 col l8 offset-l2">{me.get('first_name') + ' ' + me.get('last_name')}</div>
@@ -83,7 +78,7 @@ var ProfileComponent = React.createClass({
 
 
               <dd><button id="submitbtn2" className="col m6 waves-effect waves-light btn" onClick={this.handleCreateProfile}>Create Yardsale</button></dd>
-            
+
           </div>
 
           <div id="main" className="col s12 col m9 col l9">

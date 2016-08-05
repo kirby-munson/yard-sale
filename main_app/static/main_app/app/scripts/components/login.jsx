@@ -1,5 +1,4 @@
 var React = require('react');
-var router = require('../router');
 var User = require('../models/user').User;
 
 
